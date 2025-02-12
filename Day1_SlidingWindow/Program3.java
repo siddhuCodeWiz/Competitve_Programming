@@ -89,7 +89,7 @@ class Program3 {
         int currRooms = 0;
 
         while(i<n && j<n){
-            // System.out.println(i+" "+j+" "+"-> "+currRooms);
+            System.out.println(i+" "+j+" "+"-> "+currRooms);
             if(currArea-arr[j]<0){
                 // System.out.println("Room area negative");
                 currArea+=arr[i];
@@ -111,10 +111,10 @@ class Program3 {
                 hm.put(arr[j], hm.get(arr[j])+1);
                 j++; 
                 currRooms++;
-                maxRooms = Math.max(currRooms, maxRooms);
             }
+            maxRooms = Math.max(currRooms, maxRooms);
         }
-        return currRooms;
+        return maxRooms;
     }
 
 }

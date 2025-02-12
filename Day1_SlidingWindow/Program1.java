@@ -92,3 +92,68 @@ class Program1 {
         return (minPositive == Integer.MAX_VALUE) ? -1 : minPositive;
     }
 }
+
+
+
+
+
+/*import java.util.*;
+
+class Solution{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        // System.out.println(-2/-1);
+        int n = sc.nextInt();
+        int l = sc.nextInt();
+        int r = sc.nextInt();
+        
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        long minPrd=Integer.MAX_VALUE;
+        
+        for(int i=l; i<=r; i++){
+            long currPrd = findFirstPrd(arr, i);
+            int leftPtr = 0;
+            int rightPtr = i-1;
+            
+            while(leftPtr<n && rightPtr<n){
+                // System.out.println(currPrd);
+                // System.out.println(leftPtr+"    "+rightPtr);
+                if(currPrd>0){
+                    minPrd = (long)Math.min(minPrd, currPrd);
+                }
+                // leftPtr;
+                rightPtr++;
+                if(arr[leftPtr]!=0)
+                    currPrd/=arr[leftPtr];
+                else
+                    currPrd=findPrd(arr, leftPtr+1, rightPtr);
+                if(rightPtr<n)
+                    currPrd*=arr[rightPtr];
+                leftPtr++;
+            }
+        }
+        if(minPrd!=Integer.MAX_VALUE)
+            System.out.println(minPrd);
+        else
+            System.out.println(-1);
+    }
+    
+    public static int findFirstPrd(int[] arr, int s){
+        int currPrd = 1;
+        for(int i=0; i<s; i++){
+            currPrd*=arr[i];
+        }
+        return currPrd;
+    }
+    
+    public static int findPrd(int[] arr, int i, int j){
+        int currPrd = 1;
+        for(int k=i; k<j; k++){
+            currPrd*=arr[k];
+        }
+        return currPrd;
+    }
+} */
