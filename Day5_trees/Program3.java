@@ -1,4 +1,4 @@
-package Day5;
+package Day5_trees;
 
 /*Construct Tree from the given Level-order and In-order.
 Compute the Depth and Sum of the Deepest nodes in the Binary tree

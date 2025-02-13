@@ -1,4 +1,4 @@
-package Day5;
+package Day5_trees;
 /*Construct the binary tree from the given In-order and Pre-order. 
 Find Nodes Between Two Levels in Spiral Order.
 The spiral order is as follows:

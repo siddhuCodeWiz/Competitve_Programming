@@ -1,4 +1,4 @@
-package Day5;
+package Day5_trees;
 
 /*Given the in-order and post-order traversals of a binary tree, construct 
 the original binary tree. For the given Q number of queries, 
