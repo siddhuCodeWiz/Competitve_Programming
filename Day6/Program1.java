@@ -21,6 +21,7 @@ public class Program1 {
         }
         
         m.buildTree();
+        sc.close();
     }
 }
 
@@ -102,3 +103,110 @@ class Main{
         }
     }
 }
+
+
+
+/*import java.util.*;
+
+class Solution {
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        
+        TreeNode(int val) {
+            this.val = val;
+        }
+    }
+    
+    static int preIndex = 0;
+    static Map<Integer, Integer> postMap;
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Read preorder
+        String[] preStr = sc.nextLine().trim().split(" ");
+        int[] preorder = new int[preStr.length];
+        for(int i = 0; i < preStr.length; i++) {
+            preorder[i] = Integer.parseInt(preStr[i]);
+        }
+        
+        // Read postorder
+        String[] postStr = sc.nextLine().trim().split(" ");
+        int[] postorder = new int[postStr.length];
+        for(int i = 0; i < postStr.length; i++) {
+            postorder[i] = Integer.parseInt(postStr[i]);
+        }
+        
+        // Construct tree and print level order
+        TreeNode root = constructTree(preorder, postorder);
+        List<List<Integer>> result = levelOrder(root);
+        System.out.println(result);
+    }
+    
+    public static TreeNode constructTree(int[] preorder, int[] postorder) {
+        preIndex = 0;
+        postMap = new HashMap<>();
+        
+        // Store postorder indices in map for O(1) lookup
+        for(int i = 0; i < postorder.length; i++) {
+            postMap.put(postorder[i], i);
+        }
+        
+        return buildTree(preorder, 0, postorder.length - 1);
+    }
+    
+    private static TreeNode buildTree(int[] preorder, int postStart, int postEnd) {
+        // Base cases
+        if (postStart > postEnd || preIndex >= preorder.length) {
+            return null;
+        }
+        
+        // Create root node from current preorder element
+        TreeNode root = new TreeNode(preorder[preIndex++]);
+        
+        // If this is a leaf node
+        if (postStart == postEnd) {
+            return root;
+        }
+        
+        // Find the index of next preorder element in postorder
+        // This will be the end of left subtree in postorder
+        int index = postMap.get(preorder[preIndex]);
+        
+        // If we found a valid index and it's within our current post range
+        if (index <= postEnd) {
+            // Recursively build left and right subtrees
+            root.left = buildTree(preorder, postStart, index);
+            root.right = buildTree(preorder, index + 1, postEnd - 1);
+        }
+        
+        return root;
+    }
+    
+    public static List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) return result;
+        
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+            List<Integer> currentLevel = new ArrayList<>();
+            
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode current = queue.poll();
+                currentLevel.add(current.val);
+                
+                if (current.left != null) queue.offer(current.left);
+                if (current.right != null) queue.offer(current.right);
+            }
+            
+            result.add(currentLevel);
+        }
+        
+        return result;
+    }
+} */
