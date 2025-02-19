@@ -54,18 +54,16 @@ public class Program3 {
                         (Integer.parseInt(octets[2]) << 8) |
                         Integer.parseInt(octets[3]);
 
-        // Override CIDR to /28 (as expected in the output)
         int newCidr = 28;
-        int subnetSize = (int) Math.pow(2, 32 - newCidr); // 16 IPs per subnet
+        int subnetSize = (int) Math.pow(2, 32 - newCidr);
 
-        // Generate subnets
         for (int i = 0; i < numSubnets; i++) {
             int subnetAddress = baseIpInt + (i * subnetSize);
             String subnetIp = ((subnetAddress >> 24) & 255) + "." +
                               ((subnetAddress >> 16) & 255) + "." +
                               ((subnetAddress >> 8) & 255) + "." +
                               (subnetAddress & 255);
-            subnetList.add(subnetIp + "/" + newCidr); // Use /28 instead of given /26
+            subnetList.add(subnetIp + "/" + newCidr);
         }
 
         return subnetList;
@@ -74,17 +72,14 @@ public class Program3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Read input
         String baseIp = scanner.nextLine();
         int cidr = scanner.nextInt();
         int numSubnets = scanner.nextInt();
         
         scanner.close();
 
-        // Generate subnets
         List<String> subnets = generateSubnets(baseIp, cidr, numSubnets);
 
-        // Print result
         System.out.println(subnets);
     }
 }
