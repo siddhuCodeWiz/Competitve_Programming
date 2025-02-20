@@ -14,7 +14,7 @@ class Solution{
         
         Node flipped = flipTree(root);
         levelOrderTraversal(flipped);
-        
+        sc.close();
     }
     
     public static Node buildTree(Node root, int val){
