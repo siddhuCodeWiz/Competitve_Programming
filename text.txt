@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+sql injection
+command injection
+xss
+broken access control
+jackson bond, log4shell, ajp (vulnerabilities of outdated components)
+
+
+auto encoders
+stable diffusion
+
+kubernetes, docker
+
+DBMS, CN
+
+Graphs
