@@ -16,6 +16,9 @@ Graphs
 
 
 
+NTL(Extract, Transform, Load) and NIFI(Tool for automating data flow and processing)
+
+
 
 
 
@@ -36,8 +39,7 @@ which dishes are the most popular. Given an list of strings representing the dis
 names and an integer P, your task is to return the P most frequently ordered dishes.
 
 The results must be sorted by the number of orders, from the most frequent to 
-the least. If two dishes have been ordered the same number of times, they should
-be listed in alphabetical order.
+the least. If two dishes have been ordered the same number of times, they should be listed in alphabetical order.
 
 Input Format:
 -------------
