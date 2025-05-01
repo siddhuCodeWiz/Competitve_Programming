@@ -1,3 +1,6 @@
+*********************************************************************************
+*********************************************************************************
+
 sql injection
 command injection
 xss
@@ -14,15 +17,17 @@ DBMS, CN
 
 Graphs
 
-
-
 NTL(Extract, Transform, Load) and NIFI(Tool for automating data flow and processing)
 
 Callable, Runnable
 
+AWS DQS, DNS, Lambda
 
+ER Diagram
 
-
+Mongo -> 
+*********************************************************************************
+*********************************************************************************
 
 
 
@@ -215,6 +220,21 @@ Explanation:
 1st post is with Azure, 2nd post is with Emerald,
 3rd post is with Crimson.
 Minimum cost: 2 + 5 + 3 = 10.
+
+
+
+
+
+
+
+
+
+Day 43
+
+
+
+
+
 
 
 
