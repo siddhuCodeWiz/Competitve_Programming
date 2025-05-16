@@ -23,7 +23,7 @@ An integer, largest possible subset of containers.
 
 
 Example 1:
-----------
+----------    
 Input=
 10 0001 111001 1 0
 5 3
